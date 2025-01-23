@@ -155,6 +155,7 @@ func (h *AuthHandler) LoginHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (h *AuthHandler) RefreshTokenHandler(w http.ResponseWriter, r *http.Request) {
+    log.Printf("Attempting to refresh the token");
     refreshToken := r.Header.Get("Authorization")
     if !strings.HasPrefix(refreshToken, "Bearer ") {
         http.Error(w, "invalid token format", http.StatusBadRequest)
@@ -194,6 +195,7 @@ func (h *AuthHandler) RefreshTokenHandler(w http.ResponseWriter, r *http.Request
 }
 
 func (h *AuthHandler) ValidateAccessTokenHandler(w http.ResponseWriter, r *http.Request) {
+    log.Printf("Checking the access token");
     token := r.Header.Get("Authorization")
     if !strings.HasPrefix(token, "Bearer ") {
         http.Error(w, "invalid token format", http.StatusBadRequest)

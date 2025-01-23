@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "barebones-rn-go-auth",
-    "slug": "barebones-rn-go-auth",
+    "name": "foodl-app",
+    "slug": "foodl-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
